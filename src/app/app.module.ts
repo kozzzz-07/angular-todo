@@ -5,15 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { FormsModule } from '@angular/forms';
-import { TodoListComponent } from './feature-modules/todo/components/presentations/todo-list/todo-list.component';
+import { TodoModule } from './feature-modules/todo/todo.module';
 
 @NgModule({
-  declarations: [AppComponent, TodoListComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({}, {}),
     FormsModule,
+    TodoModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

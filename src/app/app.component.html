@@ -1,12 +1,1 @@
-<ul>
-  <li *ngFor="let task of tasks" class="{{ task.isDone ? 'done' : '' }}">
-    <label>
-      <input type="checkbox" [(ngModel)]="task.isDone">
-      {{ task.title }}
-    </label>
-  </li>
-  <li class="taskForm">
-    <input type="text" [(ngModel)]="newTaskTitle" #title="ngModel" required>
-    <button (click)="addTask()" [disabled]="title.invalid">追加</button>
-  </li>
-</ul>
+<router-outlet></router-outlet>
